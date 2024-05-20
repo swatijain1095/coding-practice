@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import submitForm from "./ContactForm/contactForm";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <form
+        onSubmit={submitForm}
+        action="https://www.greatfrontend.com/api/questions/contact-form"
+        method="post"
+      >
+        <div>
+          <label>Name</label>
+          <input id="name-input" name="name" type="text" />
+        </div>
+        <div>
+          <label>Email</label>
+          <input id="email-input" name="email" type="email" />
+        </div>
+        <div>
+          <label htmlFor="message-input">Message</label>
+          <textarea id="message-input" name="message"></textarea>
+        </div>
+        <div>
+          <button>Send</button>
+        </div>
+      </form>
     </div>
   );
 }
