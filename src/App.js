@@ -1,9 +1,11 @@
-import submitForm from "./ContactForm/contactForm";
+import submitForm from "./components/ContactForm/contactForm";
+
+import Accordion from "./components/Accordion/Accordion";
 
 function App() {
   return (
     <div className="App">
-      <form
+      {/* <form
         onSubmit={submitForm}
         action="https://www.greatfrontend.com/api/questions/contact-form"
         method="post"
@@ -23,7 +25,8 @@ function App() {
         <div>
           <button>Send</button>
         </div>
-      </form>
+      </form> */}
+      <Accordion />
     </div>
   );
 }
