@@ -1,6 +1,7 @@
 import submitForm from "./components/ContactForm/contactForm";
 
 import Accordion from "./components/Accordion/Accordion";
+import ProgressBar from "./components/ProgressBar/ProgressBar";
 
 function App() {
   return (
@@ -27,6 +28,14 @@ function App() {
         </div>
       </form> */}
       <Accordion />
+      <hr style={{ height: 2, borderWidth: 2, color: "black" }} />
+      <div className="bars">
+        <ProgressBar value={0} />
+        <ProgressBar value={25} />
+        <ProgressBar value={50} />
+        <ProgressBar value={75} />
+        <ProgressBar value={100} />
+      </div>
     </div>
   );
 }
